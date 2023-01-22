@@ -28,5 +28,16 @@ public class ModrinthVersion {
     public List<ModrinthFile> getFiles() {
         return files;
     }
+
+    @Override
+    public String toString() {
+        return "ModrinthVersion{" +
+                "name='" + name + '\'' +
+                ", version_number='" + version_number + '\'' +
+                ", id='" + id + '\'' +
+                ", project_id='" + project_id + '\'' +
+                ", files=" + files +
+                '}';
+    }
 }
 

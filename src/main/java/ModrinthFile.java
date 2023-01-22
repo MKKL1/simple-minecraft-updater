@@ -24,4 +24,14 @@ public class ModrinthFile {
     public int getSize() {
         return size;
     }
+
+    @Override
+    public String toString() {
+        return "ModrinthFile{" +
+                "hashes=" + hashes +
+                ", url='" + url + '\'' +
+                ", filename='" + filename + '\'' +
+                ", size=" + size +
+                '}';
+    }
 }
