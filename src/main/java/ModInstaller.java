@@ -7,6 +7,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.concurrent.CompletableFuture;
@@ -39,7 +41,7 @@ public class ModInstaller {
         try {
             URL modUrl = new URL(modData.getFile_url());
             modDownloader.downloadFileAsync(modUrl).thenAcceptAsync(bytes -> {
-                String pathToDownload = String.valueOf(Path.of(modsDirectory, FilenameUtils.getName(modUrl.getPath())));
+                String pathToDownload = URLDecoder.decode(String.valueOf(Path.of(modsDirectory, FilenameUtils.getName(modUrl.getPath()))), StandardCharsets.UTF_8);
                 try(FileOutputStream fos = new FileOutputStream(pathToDownload)) {
                     fos.write(bytes);
                     completableFuture.complete(pathToDownload);

@@ -5,6 +5,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -24,27 +25,31 @@ public class Main {
             modList = mapper.readValue(fileReader, ModList.class);
         }
         for(ModData modData : modList.getMods()) {
-            Request request = new Request.Builder()
-                    .url("https://api.modrinth.com/v2/version/" + modData.getVersion_id())
-                    .build();
-
-            Response response = client.newCall(request).execute();
-
-            ModrinthVersion version = mapper.readValue(Objects.requireNonNull(response.body()).byteStream(), ModrinthVersion.class);
-            modData.updateData(version);
+            Request request;
+            Response response;
             if(modData.getVersion_id() == null) {
                 request = new Request.Builder()
                         .url("https://api.modrinth.com/v2/project/" + modData.getMod_name() + "/version")
                         .build();
                 response = client.newCall(request).execute();
                 List<ModrinthVersion> list = mapper.readValue(Objects.requireNonNull(response.body()).byteStream(), new TypeReference<>() {});
-                modData.setVersion_id(list.stream().filter(x -> x.getVersion_number() == modData.getVersion_number()).findFirst().orElseThrow().getId());
+                System.out.println(list.toString());
+                modData.setVersion_id(list.stream().filter(x -> x.getVersion_number().equals(modData.getVersion_number())).findFirst().orElseThrow().getId());
             }
+
+            request = new Request.Builder()
+                    .url("https://api.modrinth.com/v2/version/" + modData.getVersion_id())
+                    .build();
+            response = client.newCall(request).execute();
+
+            ModrinthVersion version = mapper.readValue(Objects.requireNonNull(response.body()).byteStream(), ModrinthVersion.class);
+            modData.updateData(version);
+
             System.out.println(version);
         }
 
-//        ModInstaller modInstaller = new ModInstaller(client, "mods");
-//        modInstaller.installMods(modList);
+        ModInstaller modInstaller = new ModInstaller(client, "mods");
+        modInstaller.installMods(modList);
 
         try(FileWriter fileWriter = new FileWriter("mods.json")) {
             mapper.writerWithDefaultPrettyPrinter().writeValue(fileWriter, modList);

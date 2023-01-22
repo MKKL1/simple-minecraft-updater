@@ -49,12 +49,10 @@ public class ModData {
     @JsonSetter("url")
     public void setUrl(String url) {
         if (url != null) {
-            System.out.println(url);
             Matcher matcher = ModrithUtils.getUrlData(url);
             if (matcher.find()) {
                 mod_name = matcher.group("mod");
                 version_number = matcher.group("version");
-                System.out.println(mod_name + " " + version_number);
             }
         }
         this.url = url;
