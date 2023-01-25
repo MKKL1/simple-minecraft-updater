@@ -1,3 +1,5 @@
+import modrinth.ModData;
+
 import java.util.List;
 
 public class ModList {

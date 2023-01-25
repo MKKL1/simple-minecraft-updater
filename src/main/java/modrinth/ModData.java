@@ -1,10 +1,13 @@
+package modrinth;
+
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSetter;
+import modrinth.ModrinthFile;
+import modrinth.ModrinthVersion;
+import modrinth.ModrithUtils;
 
-import java.net.URL;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ModData {

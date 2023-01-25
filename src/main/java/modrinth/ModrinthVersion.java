@@ -1,3 +1,5 @@
+package modrinth;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;
@@ -31,7 +33,7 @@ public class ModrinthVersion {
 
     @Override
     public String toString() {
-        return "ModrinthVersion{" +
+        return "modrinth.ModrinthVersion{" +
                 "name='" + name + '\'' +
                 ", version_number='" + version_number + '\'' +
                 ", id='" + id + '\'' +

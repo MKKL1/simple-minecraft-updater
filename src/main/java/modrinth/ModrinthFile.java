@@ -1,3 +1,5 @@
+package modrinth;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.HashMap;
@@ -27,7 +29,7 @@ public class ModrinthFile {
 
     @Override
     public String toString() {
-        return "ModrinthFile{" +
+        return "modrinth.ModrinthFile{" +
                 "hashes=" + hashes +
                 ", url='" + url + '\'' +
                 ", filename='" + filename + '\'' +
