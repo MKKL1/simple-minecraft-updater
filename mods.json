@@ -3,6 +3,7 @@
     "sha512" : "517ab5863bb20c70581683a3e1e408a5d80cd742fcaeabe40c651e4d7567c393fd1a06de9e3250f19e6745201b734414e974e173da719fad2eb3fbc540991fb0",
     "file_url" : "https://cdn.modrinth.com/data/AANobbMI/versions/oYfJQ6lR/sodium-fabric-mc1.19.3-0.4.8%2Bbuild.22.jar",
     "mod_name" : "sodium",
+    "jar_mod_id" : "sodium",
     "version_id" : "oYfJQ6lR",
     "version_number" : "mc1.19.3-0.4.8",
     "url" : "https://modrinth.com/mod/sodium/version/mc1.19.3-0.4.8"

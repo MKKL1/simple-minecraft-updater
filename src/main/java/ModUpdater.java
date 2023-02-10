@@ -1,7 +1,7 @@
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import modrinth.ModData;
+import modrinth.ListModData;
 import modrinth.ModrinthVersion;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -21,8 +21,8 @@ public class ModUpdater {
         this.mapper.configure(JsonParser.Feature.AUTO_CLOSE_SOURCE, true);
     }
 
-    public void updateMods(ModList modList) {
-        for(ModData modData : modList.getMods()) {
+    public void updateMods(ModList modList) throws IOException {
+        for(ListModData modData : modList.getMods()) {
             Request request;
             Response response;
             if(modData.getVersion_id() == null) {
@@ -31,7 +31,6 @@ public class ModUpdater {
                         .build();
                 response = client.newCall(request).execute();
                 List<ModrinthVersion> list = mapper.readValue(Objects.requireNonNull(response.body()).byteStream(), new TypeReference<>() {});
-                System.out.println(list.toString());
                 modData.setVersion_id(list.stream().filter(x -> x.getVersion_number().equals(modData.getVersion_number())).findFirst().orElseThrow().getId());
             }
 

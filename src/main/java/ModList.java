@@ -1,15 +1,15 @@
-import modrinth.ModData;
+import modrinth.ListModData;
 
 import java.util.List;
 
 public class ModList {
-    private List<ModData> mods;
+    private List<ListModData> mods;
 
-    public List<ModData> getMods() {
+    public List<ListModData> getMods() {
         return mods;
     }
 
-    public void setMods(List<ModData> mods) {
+    public void setMods(List<ListModData> mods) {
         this.mods = mods;
     }
 }

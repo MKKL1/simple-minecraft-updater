@@ -3,18 +3,16 @@ package modrinth;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import modrinth.ModrinthFile;
-import modrinth.ModrinthVersion;
-import modrinth.ModrithUtils;
 
 import java.util.regex.Matcher;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ModData {
+public class ListModData {
     private String url;
     private String sha512;
     private String file_url;
     private String mod_name;
+    private String jar_mod_id;
     private String version_id;
     private String version_number;
 
@@ -83,5 +81,13 @@ public class ModData {
 
     public void setMod_name(String mod_name) {
         this.mod_name = mod_name;
+    }
+
+    public String getJar_mod_id() {
+        return jar_mod_id;
+    }
+
+    public void setJar_mod_id(String jar_mod_id) {
+        this.jar_mod_id = jar_mod_id;
     }
 }
