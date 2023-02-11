@@ -16,7 +16,9 @@ public class ModJarReader {
     }
 
     public static ModJarReader create(byte[] body) throws IOException {
-        return new ModJarReader(new ByteArrayInputStream(body));
+        try(ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(body)) {
+            return new ModJarReader(byteArrayInputStream);
+        }
     }
 
     public static ModJarReader create(InputStream inputStream) throws IOException {

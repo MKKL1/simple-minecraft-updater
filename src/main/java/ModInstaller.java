@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 
 public class ModInstaller {
     private final String modsDirectory;
@@ -45,14 +46,16 @@ public class ModInstaller {
             modDownloader.downloadFileAsync(modUrl).thenAcceptAsync(response -> {
                 try (FileOutputStream fos = new FileOutputStream(pathToDownload)) {
                     fos.write(Objects.requireNonNull(Objects.requireNonNull(response.body()).bytes()));
-                    completableFuture.complete(pathToDownload);
                     fos.flush();
+                    fos.close();
+                    completableFuture.complete(pathToDownload);
                 } catch (IOException e) {
                     completableFuture.completeExceptionally(e);
-                } finally {
-                    Objects.requireNonNull(response.body()).close();
                 }
-            });
+                Objects.requireNonNull(response).close();
+            }).exceptionally(ex -> {
+                completableFuture.completeExceptionally(ex);
+                return null;});
         } catch (MalformedURLException e) {
             completableFuture.completeExceptionally(e);
         }

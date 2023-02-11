@@ -45,4 +45,9 @@ public class ListModData {
     public void setSha512(String sha512) {
         this.sha512 = sha512;
     }
+
+    @Override
+    public String toString() {
+        return mod_name + ":" + version_number;
+    }
 }
