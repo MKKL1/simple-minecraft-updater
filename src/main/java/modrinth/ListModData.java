@@ -1,9 +1,13 @@
 package modrinth;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
+import java.io.File;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.regex.Matcher;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -22,7 +26,7 @@ public class ListModData {
         if(version_number == null) version_number = modrinthVersion.getVersion_number();
         if(modrinthVersion.getFiles().size() == 0) return;
         ModrinthFile modrinthFile = modrinthVersion.getFiles().get(0);
-        if(file_url == null) file_url = modrinthFile.getUrl();
+        if(file_url == null) file_url = URLDecoder.decode(modrinthFile.getUrl(), StandardCharsets.UTF_8);
         if(sha512 == null) sha512 = modrinthFile.getHashes().get("sha512");
     }
 

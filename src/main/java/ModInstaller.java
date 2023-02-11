@@ -1,5 +1,6 @@
 import modrinth.ListModData;
 import okhttp3.OkHttpClient;
+import okhttp3.Response;
 import org.apache.commons.io.FilenameUtils;
 
 import java.io.FileOutputStream;
@@ -10,6 +11,7 @@ import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
@@ -22,9 +24,9 @@ public class ModInstaller {
         modDownloader = new FileDownloader(client);
     }
 
-    public void installMods(ModList modList) {
+    public void installMods(List<ListModData> modList) {
         ArrayList<CompletableFuture<String>> completableFutureList = new ArrayList<CompletableFuture<String>>();
-        for(ListModData modData : modList.getMods()) {
+        for(ListModData modData : modList) {
             completableFutureList.add(installMod(modData));
         }
         completableFutureList.forEach(x -> x.exceptionallyAsync(throwable -> {
@@ -38,25 +40,14 @@ public class ModInstaller {
         CompletableFuture<String> completableFuture = new CompletableFuture<>();
         try {
             URL modUrl = new URL(modData.getFile_url());
+            String pathToDownload = URLDecoder.decode(String.valueOf(Path.of(modsDirectory, FilenameUtils.getName(modUrl.getPath()))), StandardCharsets.UTF_8);
+            System.out.println("Downloading to " + pathToDownload);
+
             modDownloader.downloadFileAsync(modUrl).thenAcceptAsync(response -> {
-                String pathToDownload = URLDecoder.decode(String.valueOf(Path.of(modsDirectory, FilenameUtils.getName(modUrl.getPath()))), StandardCharsets.UTF_8);
-
-                byte[] modbody = new byte[0];
-                try {
-                    modbody = Objects.requireNonNull(response.body()).bytes();
-                    if(modData.getJar_mod_id() == null) {
-                        ModJarReader modJarReader = ModJarReader.create(modbody);
-                        modData.setJar_mod_id(modJarReader.getFabricModJson().id);
-                    }
-                } catch (IOException e) {
-                    completableFuture.completeExceptionally(e);
-                }
-
-
-
-                try(FileOutputStream fos = new FileOutputStream(pathToDownload)) {
-                    fos.write(Objects.requireNonNull(modbody));
+                try (FileOutputStream fos = new FileOutputStream(pathToDownload)) {
+                    fos.write(Objects.requireNonNull(Objects.requireNonNull(response.body()).bytes()));
                     completableFuture.complete(pathToDownload);
+                    fos.flush();
                 } catch (IOException e) {
                     completableFuture.completeExceptionally(e);
                 } finally {
@@ -67,5 +58,9 @@ public class ModInstaller {
             completableFuture.completeExceptionally(e);
         }
         return completableFuture;
+    }
+
+    public CompletableFuture<Response> downloadMod(ListModData modData) throws MalformedURLException {
+        return modDownloader.downloadFileAsync(new URL(modData.getFile_url()));
     }
 }

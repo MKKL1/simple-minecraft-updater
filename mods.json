@@ -1,11 +1,51 @@
 {
   "mods" : [ {
     "sha512" : "517ab5863bb20c70581683a3e1e408a5d80cd742fcaeabe40c651e4d7567c393fd1a06de9e3250f19e6745201b734414e974e173da719fad2eb3fbc540991fb0",
-    "file_url" : "https://cdn.modrinth.com/data/AANobbMI/versions/oYfJQ6lR/sodium-fabric-mc1.19.3-0.4.8%2Bbuild.22.jar",
+    "file_url" : "https://cdn.modrinth.com/data/AANobbMI/versions/oYfJQ6lR/sodium-fabric-mc1.19.3-0.4.8+build.22.jar",
     "mod_name" : "sodium",
     "jar_mod_id" : "sodium",
     "version_id" : "oYfJQ6lR",
     "version_number" : "mc1.19.3-0.4.8",
     "url" : "https://modrinth.com/mod/sodium/version/mc1.19.3-0.4.8"
+  }, {
+    "sha512" : "5be0518a8b08fbb45c0fdd283be12baf1f034a652a0e17052a57f46adf123db72181494df4b03d544bafef17f0f0f2fbf846ba70edfcd26c6f328bbeadb90379",
+    "file_url" : "https://cdn.modrinth.com/data/P7dR8mSH/versions/WJ830YlF/fabric-api-0.73.2+1.19.3.jar",
+    "mod_name" : "fabric-api",
+    "jar_mod_id" : "fabric-api",
+    "version_id" : "WJ830YlF",
+    "version_number" : "0.73.2+1.19.3",
+    "url" : "https://modrinth.com/mod/fabric-api/version/0.73.2+1.19.3"
+  }, {
+    "sha512" : "2f33a06769044e43b5cfb95f1b7f8c2a14ef2f025d6d531ed64dae186eaf3c3d72eeb68f6422f7637b67c4055022c9ef8f5f582d9081dc06a4642cda4c242b82",
+    "file_url" : "https://cdn.modrinth.com/data/gvQqBUqZ/versions/XS6vJwop/lithium-fabric-mc1.19.3-0.10.4.jar",
+    "mod_name" : "lithium",
+    "jar_mod_id" : "lithium",
+    "version_id" : "XS6vJwop",
+    "version_number" : "mc1.19.3-0.10.4",
+    "url" : "https://modrinth.com/mod/lithium/version/mc1.19.3-0.10.4"
+  }, {
+    "sha512" : "240765b6911e5295e4a8a772d29767a3b2292614516fb3c9c0b981aec568c3d9fbd462dfbc992acd13cff7bb177bc5418843de3d2c783b63f3d37292a6066037",
+    "file_url" : "https://cdn.modrinth.com/data/YL57xq9U/versions/ExtC2pRY/iris-mc1.19.3-1.5.2.jar",
+    "mod_name" : "iris",
+    "jar_mod_id" : "iris",
+    "version_id" : "ExtC2pRY",
+    "version_number" : "1.5.2+1.19.3",
+    "url" : "https://modrinth.com/mod/iris/version/1.5.2+1.19.3"
+  }, {
+    "sha512" : "dc3766352c645f6da92b13000dffa80584ee58093c925c2154eb3c125a2b2f9a3af298202e2658b039c6ee41e81ca9a2e9d4b942561f7085239dd4421e0cce0a",
+    "file_url" : "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar",
+    "mod_name" : "lazydfu",
+    "jar_mod_id" : "lazydfu",
+    "version_id" : "4SHylIO9",
+    "version_number" : "0.1.3",
+    "url" : "https://modrinth.com/mod/lazydfu/version/0.1.3"
+  }, {
+    "sha512" : "29a9d611c194e7b26db6a139e0c83ceb1fd0fcda1ebc871435c3eb92e2288b7431043356e2c6c7467856ae637e50b63392808f9fe649dc52911637ade65d7b31",
+    "file_url" : "https://cdn.modrinth.com/data/NNAgCjsB/versions/bRBO9ZzX/entityculling-fabric-1.5.2-mc1.19.3.jar",
+    "mod_name" : "entityculling",
+    "jar_mod_id" : "entityculling",
+    "version_id" : "bRBO9ZzX",
+    "version_number" : "1.5.2-1.19.3",
+    "url" : "https://modrinth.com/mod/entityculling/version/1.5.2-1.19.3"
   } ]
 }
