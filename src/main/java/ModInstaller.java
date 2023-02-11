@@ -1,4 +1,3 @@
-import modrinth.ListModData;
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
 import org.apache.commons.io.FilenameUtils;

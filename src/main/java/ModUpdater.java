@@ -1,13 +1,9 @@
 import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import modrinth.ListModData;
-import modrinth.ModrinthVersion;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 import org.apache.commons.codec.digest.DigestUtils;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -20,7 +16,6 @@ import java.util.stream.Stream;
 public class ModUpdater {
     ObjectMapper mapper;
     OkHttpClient client;
-    public boolean checkFabricModId = true;
     private final String modDirectory;
     private final ModInstaller modInstaller;
 
@@ -35,32 +30,13 @@ public class ModUpdater {
     public void verifyModList(ModList modList) throws IOException {
 
         for(ListModData modData : modList.getMods()) {
-            Request request;
-            Response response;
-            if(modData.getVersion_id() == null) {
-                request = new Request.Builder()
-                        .url("https://api.modrinth.com/v2/project/" + modData.getMod_name() + "/version")
-                        .build();
-                response = client.newCall(request).execute();
-                List<ModrinthVersion> list = mapper.readValue(Objects.requireNonNull(response.body()).byteStream(), new TypeReference<>() {});
-                modData.setVersion_id(list.stream().filter(x -> x.getVersion_number().equals(modData.getVersion_number())).findFirst().orElseThrow().getId());
-            }
-
-            //Modrinth api get version
-            request = new Request.Builder()
-                    .url("https://api.modrinth.com/v2/version/" + modData.getVersion_id())
-                    .build();
-            response = client.newCall(request).execute();
-
-            ModrinthVersion version = mapper.readValue(Objects.requireNonNull(response.body()).byteStream(), ModrinthVersion.class);
-            modData.updateData(version);
-
-            if(checkFabricModId && modData.getJar_mod_id() == null) {
+            if(modData.getJar_mod_id() == null || modData.getSha512() == null) {
                 modInstaller.downloadMod(modData).thenAccept(response1 -> {
                     try {
-                        ModJarReader modJarReader = ModJarReader.create(Objects.requireNonNull(response1.body()).bytes());
-                        String id = modJarReader.getFabricModJson().id;
-                        modData.setJar_mod_id(id);
+                        byte[] bytes = Objects.requireNonNull(response1.body()).bytes();
+                        ModJarReader modJarReader = ModJarReader.create(bytes);
+                        modData.setFabricModJson(modJarReader.getFabricModJson());
+                        modData.setSha512(DigestUtils.sha512Hex(new ByteArrayInputStream(bytes)));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
