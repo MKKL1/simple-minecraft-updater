@@ -1,37 +1,49 @@
 {
   "mods" : [ {
-    "sha512" : "517ab5863bb20c70581683a3e1e408a5d80cd742fcaeabe40c651e4d7567c393fd1a06de9e3250f19e6745201b734414e974e173da719fad2eb3fbc540991fb0",
-    "file_url" : "https://cdn.modrinth.com/data/AANobbMI/versions/oYfJQ6lR/sodium-fabric-mc1.19.3-0.4.8+build.22.jar",
+    "sha512" : "2cc404e7879e964d62fbefe50e959a9ebe0e9be26ba0d49500ec533bc98ebdc49dbdb4ad953a74023e23d038e9f38730c11fd7959b0f1ad6fc5db3ab4616e022",
+    "file_url" : "https://mediafilez.forgecdn.net/files/4216/90/auto-clicker-fabric-1.19.3-1.5.0-build.20.jar",
+    "mod_name" : "Auto Clicker",
+    "jar_mod_id" : "autoclicker-fabric",
+    "version_number" : "1.19.3-1.5.0-build.20"
+  }, {
+    "sha512" : "ea6473e31b06b5050270d4bab841395dd4db217df9c485419f8a925220bfe87055876f8567b97dae1ff5d89cb998ee366a5a1de80b0ce15c7ce20214529e2dba",
+    "file_url" : "https://cdn-raw.modrinth.com/data/TQTTVgYE/versions/b0lLyrj4/fabric-carpet-1.19.3-1.4.93%2Bv221230.jar",
+    "mod_name" : "Carpet Mod",
+    "jar_mod_id" : "carpet",
+    "version_number" : "1.4.93"
+  }, {
+    "sha512" : "f2d75f2ca519e1949cdd6e95cb855895c554f085796dca616680f3f0ea74f9dedb9114264b2cf867f4904640548cb41626e8059b0008ea39cf967feb59876316",
+    "file_url" : "https://cdn-raw.modrinth.com/data/AANobbMI/versions/idtcaIVT/sodium-fabric-mc1.19.3-0.4.9%2Bbuild.23.jar",
     "mod_name" : "Sodium",
     "jar_mod_id" : "sodium",
-    "version_number" : "0.4.8+build.22"
+    "version_number" : "0.4.9+build.23"
   }, {
     "sha512" : "5be0518a8b08fbb45c0fdd283be12baf1f034a652a0e17052a57f46adf123db72181494df4b03d544bafef17f0f0f2fbf846ba70edfcd26c6f328bbeadb90379",
-    "file_url" : "https://cdn.modrinth.com/data/P7dR8mSH/versions/WJ830YlF/fabric-api-0.73.2+1.19.3.jar",
+    "file_url" : "https://cdn-raw.modrinth.com/data/P7dR8mSH/versions/WJ830YlF/fabric-api-0.73.2%2B1.19.3.jar",
     "mod_name" : "Fabric API",
     "jar_mod_id" : "fabric-api",
     "version_number" : "0.73.2+1.19.3"
   }, {
     "sha512" : "2f33a06769044e43b5cfb95f1b7f8c2a14ef2f025d6d531ed64dae186eaf3c3d72eeb68f6422f7637b67c4055022c9ef8f5f582d9081dc06a4642cda4c242b82",
-    "file_url" : "https://cdn.modrinth.com/data/gvQqBUqZ/versions/XS6vJwop/lithium-fabric-mc1.19.3-0.10.4.jar",
+    "file_url" : "https://cdn-raw.modrinth.com/data/gvQqBUqZ/versions/XS6vJwop/lithium-fabric-mc1.19.3-0.10.4.jar",
     "mod_name" : "Lithium",
     "jar_mod_id" : "lithium",
     "version_number" : "0.10.4"
   }, {
     "sha512" : "240765b6911e5295e4a8a772d29767a3b2292614516fb3c9c0b981aec568c3d9fbd462dfbc992acd13cff7bb177bc5418843de3d2c783b63f3d37292a6066037",
-    "file_url" : "https://cdn.modrinth.com/data/YL57xq9U/versions/ExtC2pRY/iris-mc1.19.3-1.5.2.jar",
+    "file_url" : "https://cdn-raw.modrinth.com/data/YL57xq9U/versions/ExtC2pRY/iris-mc1.19.3-1.5.2.jar",
     "mod_name" : "Iris",
     "jar_mod_id" : "iris",
     "version_number" : "1.5.2"
   }, {
     "sha512" : "dc3766352c645f6da92b13000dffa80584ee58093c925c2154eb3c125a2b2f9a3af298202e2658b039c6ee41e81ca9a2e9d4b942561f7085239dd4421e0cce0a",
-    "file_url" : "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar",
+    "file_url" : "https://cdn-raw.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar",
     "mod_name" : "LazyDFU",
     "jar_mod_id" : "lazydfu",
     "version_number" : "0.1.3"
   }, {
     "sha512" : "29a9d611c194e7b26db6a139e0c83ceb1fd0fcda1ebc871435c3eb92e2288b7431043356e2c6c7467856ae637e50b63392808f9fe649dc52911637ade65d7b31",
-    "file_url" : "https://cdn.modrinth.com/data/NNAgCjsB/versions/bRBO9ZzX/entityculling-fabric-1.5.2-mc1.19.3.jar",
+    "file_url" : "https://cdn-raw.modrinth.com/data/NNAgCjsB/versions/bRBO9ZzX/entityculling-fabric-1.5.2-mc1.19.3.jar",
     "mod_name" : "EntityCulling-Fabric",
     "jar_mod_id" : "entityculling",
     "version_number" : "1.5.2-mc1.19.3"
@@ -41,6 +53,156 @@
     "mod_name" : "Mod Menu",
     "jar_mod_id" : "modmenu",
     "version_number" : "5.0.2"
+  }, {
+    "sha512" : "a06b7cd8f472c177621680d6688ad45010b8605fad49207c92066a1d682ec602aeaaa68ffd1488a87587f4207b9efb22147a1d9cc987c4a6ffd42d5c9620e13b",
+    "file_url" : "https://cdn-raw.modrinth.com/data/9s6osm5g/versions/M3yxljrZ/cloth-config-9.0.94-fabric.jar",
+    "mod_name" : "Cloth Config v9",
+    "jar_mod_id" : "cloth-config",
+    "version_number" : "9.0.94"
+  }, {
+    "sha512" : "24b5790769a9da3d79a46435012bc6d0972042b874b195dc63aa911dcbcca29496c977477f6ca9e70a850432468e565490f75ba2730eb9ec4c304e03f48c1e1a",
+    "file_url" : "https://cdn-raw.modrinth.com/data/uXXizFIs/versions/GHcKib6J/ferritecore-5.1.0-fabric.jar",
+    "mod_name" : "FerriteCore",
+    "jar_mod_id" : "ferritecore",
+    "version_number" : "5.1.0"
+  }, {
+    "sha512" : "3117387a555bd196138ca07b47922ac4fb4aac4e7d8aca86b003859485900f7d215ea2ca050febe1e05fab3ad7784a680fb5f67aa7e1a3330b80cf36db50af91",
+    "file_url" : "https://cdn-raw.modrinth.com/data/Orvt0mRa/versions/U94NcDpV/indium-1.0.14%2Bmc1.19.3.jar",
+    "mod_name" : "Indium",
+    "jar_mod_id" : "indium",
+    "version_number" : "1.0.14+mc1.19.3"
+  }, {
+    "sha512" : "38f747fd785c2cbb3c5a783ebdce27950f7e552c9e03beb6d27a9551cedf8a69a0e9c7677c9051cf946e3bffdcc6664322e24514f4397b06acec7b77d2e7ac31",
+    "file_url" : "https://cdn-raw.modrinth.com/data/PtjYWJkn/versions/wA35IJw8/sodium-extra-0.4.17%2Bmc1.19.3-build.95.jar",
+    "mod_name" : "Sodium Extra",
+    "jar_mod_id" : "sodium-extra",
+    "version_number" : "0.4.17+mc1.19.3-build.95"
+  }, {
+    "sha512" : "c9b5d1b8efdb388fb8a96f241097ab8dd3cf296a1e7ecf2004deaae237d84d7b75fde7439206cea6408bf5d43cf2d36522a344727a15d3cecd36779ee72e301e",
+    "file_url" : "https://cdn-raw.modrinth.com/data/Bh37bMuy/versions/hkSQ9RqT/reeses_sodium_options-1.4.9%2Bmc1.19.2-build.67.jar",
+    "mod_name" : "Reese's Sodium Options",
+    "jar_mod_id" : "reeses-sodium-options",
+    "version_number" : "1.4.9+mc1.19.2-build.67"
+  }, {
+    "sha512" : "68f81298c35eaaef9ad5999033b8caf886f3c583ae1edc25793bdd8c2cbf5dce6549aa8d969c55796bd8b0d411ea8df2cd0aaeb9f43adf0691776f97cebe1f9f",
+    "file_url" : "https://cdn-raw.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
+    "mod_name" : "Starlight",
+    "jar_mod_id" : "starlight",
+    "version_number" : "1.1.1+fabric.ae22326"
+  }, {
+    "sha512" : "4dec2caf697fd5152f38b8ec774e32f83c2148c9f9ac06afb129fa434f24384751628e7ab700f783aec54a1cf50e650f32c6391fc8d4585f5789bc55e5e91d91",
+    "file_url" : "https://cdn-raw.modrinth.com/data/fQEb0iXm/versions/0.2.1/krypton-0.2.1.jar",
+    "mod_name" : "Krypton",
+    "jar_mod_id" : "krypton",
+    "version_number" : "0.2.1"
+  }, {
+    "sha512" : "03afe5064a33662bdad5bc265ccdef79ed6e2b105f2cb1b72806724896aba814412f8814e81ff0f57a091c39435916b9cd022d8d59c3cc0633ea9f04cd726846",
+    "file_url" : "https://cdn-raw.modrinth.com/data/yBW8D80W/versions/9E1ECN95/lambdynamiclights-2.2.0%2B1.19.3.jar",
+    "mod_name" : "LambDynamicLights",
+    "jar_mod_id" : "lambdynlights",
+    "version_number" : "2.2.0+1.19.3"
+  }, {
+    "sha512" : "a1758446706b095b1352851a68e45f0807fccd00cbc736db9c7275e6468ea07507b6f89e3ef16f0fa46c87797c5e246a364266d0266f36d7821c2979b5542347",
+    "file_url" : "https://cdn-raw.modrinth.com/data/LQ3K71Q1/versions/2.2.0/dynamic-fps-2.2.0.jar",
+    "mod_name" : "Dynamic FPS",
+    "jar_mod_id" : "dynamicfps",
+    "version_number" : "2.2.0"
+  }, {
+    "sha512" : "b0d85f7aaf31c67a3b891d31b39fd172a1ed679533de40871124e19d2e6e0b4eec64134c6d0b998871716573b99d0f57de7635b7af838d89a75e214bbc3b3264",
+    "file_url" : "https://cdn-raw.modrinth.com/data/NRjRiSSD/versions/YtNQP5gX/memoryleakfix-1.19.3-0.7.0.jar",
+    "mod_name" : "memory Leak Fix",
+    "jar_mod_id" : "memoryleakfix",
+    "version_number" : "1.19.3-0.7.0"
+  }, {
+    "sha512" : "9ff3352a7a70c8730800aaf7b5b5612db3fb4c1f177322f6d50ecc522fd385437dae8589a01950fd23bd85cbc0c3b19d6e93ad9aaaec471523a37cc9299ec632",
+    "file_url" : "https://cdn-raw.modrinth.com/data/51shyZVL/versions/ENUmMM2R/moreculling-1.19.3-0.16.0.jar",
+    "mod_name" : "More Culling",
+    "jar_mod_id" : "moreculling",
+    "version_number" : "1.19.3-0.16.0"
+  }, {
+    "sha512" : "b9f79e8545be04bd78d0040a0e4b3a441394a52bcbac0cb7a26e92360a4c29d6483c73335062e31deb416b578c53a9915b664c856a5e2f734682946e9554c41a",
+    "file_url" : "https://cdn-raw.modrinth.com/data/dFKMFBrn/versions/iNzUzmM1/MoreCullingExtra-1.1-backport_1.19.2.jar",
+    "mod_name" : "More Culling Extra",
+    "jar_mod_id" : "morecullingextra",
+    "version_number" : "1.1-backport_1.19.2"
+  }, {
+    "sha512" : "dfe62d6ae465baa6b60249f271508bb97e5f07f663c018658dfb940f99e7fce5fa9f5b6c15e555db34b02f8db9d8e6350cb120e10469ff809480173fb8b0da49",
+    "file_url" : "https://cdn-raw.modrinth.com/data/FWumhS4T/versions/1.19-1.7.1/smoothboot-fabric-1.19-1.7.1.jar",
+    "mod_name" : "Smooth Boot",
+    "jar_mod_id" : "smoothboot",
+    "version_number" : "1.19-1.7.1"
+  }, {
+    "sha512" : "3c6fe6479de6d8c9735164eb62ecb55ecb9de0cc7405cda34c125f5356428c90a37bed8ae66e0b89acb1df957a670ce55f3d0024c76ebd075f81315f055b0a14",
+    "file_url" : "https://cdn-raw.modrinth.com/data/OVuFYfre/versions/fZx04xgT/enhancedblockentities-0.7.2%2B1.19.2.jar",
+    "mod_name" : "Enhanced Block Entities",
+    "jar_mod_id" : "enhancedblockentities",
+    "version_number" : "0.7.2+1.19.2"
+  }, {
+    "sha512" : "02d39d75d73f049184848fb4fda6d4f5fed644379f5cad9747f25be815ebf6667a780f8facbec37b59783a9adff236f8375b632d0846f13ada1f803c19c44758",
+    "file_url" : "https://cdn-raw.modrinth.com/data/1IjD5062/versions/2.0.1%2B1.19/continuity-2.0.1%2B1.19.jar",
+    "mod_name" : "Continuity",
+    "jar_mod_id" : "continuity",
+    "version_number" : "2.0.1+1.19"
+  }, {
+    "sha512" : "55da66011ad153295f2b6b2956679404ce564db764d5d8688b9f5983afe3387e014435bf54a5fbf495be535cb7fbf7b502d35bec2b2301aae2f54e2c0fba2845",
+    "file_url" : "https://cdn-raw.modrinth.com/data/qQyHxfxd/versions/uVt4LKvF/NoChatReports-FABRIC-1.19.3-v2.0.0.jar",
+    "mod_name" : "No Chat Reports",
+    "jar_mod_id" : "nochatreports",
+    "version_number" : "1.19.3-v2.0.0"
+  }, {
+    "sha512" : "9207ed8211c37266086039b93cce2dcaaec473378101cdb18d46bef43a7bb4eaf4090fb3b9b76594a85e8b2a1933ffbc1ef3d9dad6e0b61978115641458904d2",
+    "file_url" : "https://cdn-raw.modrinth.com/data/w7ThoJFB/versions/p5RjeOJL/Zoomify-2.9.2.jar",
+    "mod_name" : "Zoomify",
+    "jar_mod_id" : "zoomify",
+    "version_number" : "2.9.2"
+  }, {
+    "sha512" : "d627e4060ef5a42ce7ca5743bac282a491373ac71fc8aef2ad6bf1316f3d46af9b19a164d11b89899111aecafdff58c2c80fd5da3d8ca4e861b0c4097002767b",
+    "file_url" : "https://mediafilez.forgecdn.net/files/4148/670/itemscroller-fabric-1.19.3-0.18.0.jar",
+    "mod_name" : "Item Scroller",
+    "jar_mod_id" : "itemscroller",
+    "version_number" : "0.18.0"
+  }, {
+    "sha512" : "5cb4dba0e196c2db3a2a818ae57350afc92cb0316d65fb3384886805754f9137252defcbede97e529abe5484bd1793c5519cf11ef8fa4a316779ea0ab2e9eb12",
+    "file_url" : "https://mediafilez.forgecdn.net/files/4259/746/litematica-fabric-1.19.3-0.13.1.jar",
+    "mod_name" : "Litematica",
+    "jar_mod_id" : "litematica",
+    "version_number" : "0.13.1"
+  }, {
+    "sha512" : "73edef1b9a1b6af8a60c253135b8de50c9efe126f907d1c32e9ae57c1fa9583e040f93099b6338e1d962a868861ec7f88e372382dd76e20cddb7ec54da087509",
+    "file_url" : "https://mediafilez.forgecdn.net/files/4147/598/malilib-fabric-1.19.3-0.14.0.jar",
+    "mod_name" : "MaLiLib",
+    "jar_mod_id" : "malilib",
+    "version_number" : "0.14.0"
+  }, {
+    "sha512" : "f618945f261d8581a37e6088eb57e1d172bef93734540b3fcd085ce4b4ee3ba2651c16ffdd994e23a793ba433b3896e97eaa3350cc44d3908ba58949b562b330",
+    "file_url" : "https://mediafilez.forgecdn.net/files/4160/116/minihud-fabric-1.19.3-0.25.0.jar",
+    "mod_name" : "MiniHUD",
+    "jar_mod_id" : "minihud",
+    "version_number" : "0.25.0"
+  }, {
+    "sha512" : "6dd5e08323e422a705ddc8c7c28a8ac7cbf09e67a3ca442a599dda48c04b29d0dcc385365e64bed9978f50b19690db912dc5a9990f36b87b0a2760de50ca81ed",
+    "file_url" : "https://mediafilez.forgecdn.net/files/4162/596/tweakeroo-fabric-1.19.3-0.15.0.jar",
+    "mod_name" : "Tweakeroo",
+    "jar_mod_id" : "tweakeroo",
+    "version_number" : "0.15.0"
+  }, {
+    "sha512" : "2372deb06cc90dbcb39d7a79f5ff078498bf2bbcef16c0168d78e12d54a68c19c8f3233e1329b69a6866ce9a4ef007e9d7f23a3f78599ee8ef8f1596d43ec6de",
+    "file_url" : "https://mediafilez.forgecdn.net/files/4162/208/worldedit-mod-7.2.13.jar",
+    "mod_name" : "WorldEdit",
+    "jar_mod_id" : "worldedit",
+    "version_number" : "7.2.13+46576cc"
+  }, {
+    "sha512" : "4dec2caf697fd5152f38b8ec774e32f83c2148c9f9ac06afb129fa434f24384751628e7ab700f783aec54a1cf50e650f32c6391fc8d4585f5789bc55e5e91d91",
+    "file_url" : "https://cdn-raw.modrinth.com/data/fQEb0iXm/versions/0.2.1/krypton-0.2.1.jar",
+    "mod_name" : "Krypton",
+    "jar_mod_id" : "krypton",
+    "version_number" : "0.2.1"
+  }, {
+    "sha512" : "bd163811138b39652671e7323f20b3d09e544e09dc01e6f128d31271db72e5ed2838eaf797e5096c2aea03a5c014f49604ccac251fc92ee471a30c203ed683b7",
+    "file_url" : "https://mediafilez.forgecdn.net/files/4278/698/DistantHorizons-1.6.10a-1.19.3.jar",
+    "mod_name" : "Distant Horizons",
+    "jar_mod_id" : "lod",
+    "version_number" : "1.6.10a"
   } ],
   "fbcmlversion" : "1.19.3|0.14.13"
 }
