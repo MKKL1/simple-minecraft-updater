@@ -1,3 +1,5 @@
+package com.mkkl.mcupdater;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;

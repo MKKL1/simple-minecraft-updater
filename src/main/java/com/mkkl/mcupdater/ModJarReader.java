@@ -1,3 +1,5 @@
+package com.mkkl.mcupdater;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.ByteArrayInputStream;
@@ -5,7 +7,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.jar.JarInputStream;
 import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
 
 public class ModJarReader {
     private final ObjectMapper objectMapper = new ObjectMapper();

@@ -1,3 +1,5 @@
+package com.mkkl.mcupdater;
+
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.OkHttpClient;

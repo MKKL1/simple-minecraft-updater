@@ -1,3 +1,5 @@
+package com.mkkl.mcupdater;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
 import org.apache.commons.io.FilenameUtils;
@@ -13,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Consumer;
 
 public class ModInstaller {
     private final String modsDirectory;

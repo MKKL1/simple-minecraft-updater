@@ -1,3 +1,5 @@
+package com.mkkl.mcupdater;
+
 import okhttp3.*;
 import okio.*;
 import org.jetbrains.annotations.NotNull;

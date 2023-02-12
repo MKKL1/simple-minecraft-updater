@@ -1,3 +1,5 @@
+package com.mkkl.mcupdater;
+
 import java.util.List;
 
 public class ModList {

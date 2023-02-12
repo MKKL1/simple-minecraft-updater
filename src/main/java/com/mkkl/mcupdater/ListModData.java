@@ -1,12 +1,6 @@
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonSetter;
+package com.mkkl.mcupdater;
 
-import java.io.File;
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
-import java.util.regex.Matcher;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ListModData {
