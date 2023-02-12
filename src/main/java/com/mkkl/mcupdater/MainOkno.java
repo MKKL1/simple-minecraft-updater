@@ -15,10 +15,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Path;
 import java.util.ListIterator;
 import java.util.Objects;
@@ -72,6 +69,11 @@ public class MainOkno extends JFrame {
                 if (modList == null && !getModList()) return;
                 if (modsToUpdate != null && !modsToUpdate.isEmpty()) return;
                 modDir = modDirField.getText();
+                if (!new File(modDir).exists()) {
+                    modDirField.setBorder(new LineBorder(Color.red, 2));
+                    JOptionPane.showMessageDialog(mainPanel, "Taki folder nie istnieje");
+                    return;
+                } else modDirField.setBorder(UIManager.getLookAndFeel().getDefaults().getBorder("TextField.border"));
                 try {
                     ModUpdater modUpdater = new ModUpdater(client, modDir);
                     modUpdater.verifyModList(modList);
@@ -123,12 +125,17 @@ public class MainOkno extends JFrame {
                 ListIterator<ListModData> iter = modsToUpdate.listIterator();
                 while (iter.hasNext()) {
                     ListModData modData = iter.next();
-                    modInstaller.installMod(modData).thenAccept(x -> defModListModel.removeElement(modData)).exceptionally(ex -> {
+                    modInstaller.installMod(modData).thenAccept(x -> {
+                        defModListModel.removeElement(modData);
+                        if (defModListModel.isEmpty()) {
+                            //Finished downloading all the mods
+                            JOptionPane.showMessageDialog(mainPanel, "Wszystkie mody zostały probrane, możesz wyłączyć program");
+                        }
+                    }).exceptionally(ex -> {
                         ex.printStackTrace();
                         return null;
                     });
                 }
-
             }
         });
         resetButton.addMouseListener(new MouseAdapter() {
