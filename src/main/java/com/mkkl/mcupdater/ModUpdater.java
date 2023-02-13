@@ -10,6 +10,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ModUpdater {
@@ -46,8 +48,8 @@ public class ModUpdater {
         }
     }
 
-    public List<ListModData> getModsToUpdate(ModList modList) throws IOException {
-        List<ListModData> modsToUpdate = new ArrayList<>(modList.getMods());
+    public List<AddUpdateGoal> getModsToUpdate(ModList modList) throws IOException {
+        List<AddUpdateGoal> modsToUpdate = modList.getMods().stream().map(AddUpdateGoal::new).collect(Collectors.toList());
 
         System.out.println("Checking mod dictionary...");
         try (Stream<Path> paths = Files.walk(Paths.get(modDirectory), 1)) {
@@ -64,17 +66,17 @@ public class ModUpdater {
                         String id = modJarReader.getFabricModJson().id;
                         //System.out.println(modFile.getName() + " is a fabric mod with id of " + id);
                         //Find corresponding mod data
-                        ListModData modData = modList.getMods().stream().filter(x -> x.getJar_mod_id().equals(id)).findFirst().orElse(null);
-                        if(modData == null) {
+                        AddUpdateGoal goalModData = modsToUpdate.stream().filter(x -> x.modData.getJar_mod_id().equals(id)).findFirst().orElse(null);
+                        if(goalModData == null) {
                             System.out.println(modFile.getName() + " is not in update list");
                             continue;
                         }
-
+                        goalModData.oldFile = modFile;
                         //Check hash of jar file
                         String hash = DigestUtils.sha512Hex(bytes);
                         //Compare hash of jar file to saved hash in mod data
-                        if(hash.equals(modData.getSha512())) {
-                            modsToUpdate.remove(modData);
+                        if(hash.equals(goalModData.modData.getSha512())) {
+                            modsToUpdate.remove(goalModData);
                             continue;
                         }
                     }
@@ -86,13 +88,15 @@ public class ModUpdater {
                 }
             }
         }
+
         if(modsToUpdate.isEmpty()) {
             System.out.println("No mods to update");
             return null;
         }
+
         System.out.println("Updating mods: ");
-        for(ListModData modData : modsToUpdate) {
-            System.out.println("+ " + modData.getMod_name() + " : " + modData.getVersion_number());
+        for(AddUpdateGoal goalModData : modsToUpdate) {
+            System.out.println("+ " + goalModData.modData.getMod_name() + " : " + goalModData.modData.getVersion_number());
         }
         return modsToUpdate;
     }

@@ -138,23 +138,17 @@
     "jar_mod_id" : "enhancedblockentities",
     "version_number" : "0.7.2+1.19.2"
   }, {
-    "sha512" : "02d39d75d73f049184848fb4fda6d4f5fed644379f5cad9747f25be815ebf6667a780f8facbec37b59783a9adff236f8375b632d0846f13ada1f803c19c44758",
-    "file_url" : "https://cdn-raw.modrinth.com/data/1IjD5062/versions/2.0.1%2B1.19/continuity-2.0.1%2B1.19.jar",
+    "sha512" : "8905878952c0bd85d9b2bf3b2917232ac825dce4e77eb0aac10e80d28bdae019e3d37529f6c280e4904f918297eca87f174a9a6d8d2e5a20679ac5f01f1baf6a",
+    "file_url" : "https://cdn.discordapp.com/attachments/872543494554648637/1072588299165769829/continuity-3.0.0-beta.21.19.3.jar",
     "mod_name" : "Continuity",
     "jar_mod_id" : "continuity",
-    "version_number" : "2.0.1+1.19"
+    "version_number" : "3.0.0-beta.2+1.19.3"
   }, {
     "sha512" : "55da66011ad153295f2b6b2956679404ce564db764d5d8688b9f5983afe3387e014435bf54a5fbf495be535cb7fbf7b502d35bec2b2301aae2f54e2c0fba2845",
     "file_url" : "https://cdn-raw.modrinth.com/data/qQyHxfxd/versions/uVt4LKvF/NoChatReports-FABRIC-1.19.3-v2.0.0.jar",
     "mod_name" : "No Chat Reports",
     "jar_mod_id" : "nochatreports",
     "version_number" : "1.19.3-v2.0.0"
-  }, {
-    "sha512" : "9207ed8211c37266086039b93cce2dcaaec473378101cdb18d46bef43a7bb4eaf4090fb3b9b76594a85e8b2a1933ffbc1ef3d9dad6e0b61978115641458904d2",
-    "file_url" : "https://cdn-raw.modrinth.com/data/w7ThoJFB/versions/p5RjeOJL/Zoomify-2.9.2.jar",
-    "mod_name" : "Zoomify",
-    "jar_mod_id" : "zoomify",
-    "version_number" : "2.9.2"
   }, {
     "sha512" : "d627e4060ef5a42ce7ca5743bac282a491373ac71fc8aef2ad6bf1316f3d46af9b19a164d11b89899111aecafdff58c2c80fd5da3d8ca4e861b0c4097002767b",
     "file_url" : "https://mediafilez.forgecdn.net/files/4148/670/itemscroller-fabric-1.19.3-0.18.0.jar",
@@ -192,17 +186,17 @@
     "jar_mod_id" : "worldedit",
     "version_number" : "7.2.13+46576cc"
   }, {
-    "sha512" : "4dec2caf697fd5152f38b8ec774e32f83c2148c9f9ac06afb129fa434f24384751628e7ab700f783aec54a1cf50e650f32c6391fc8d4585f5789bc55e5e91d91",
-    "file_url" : "https://cdn-raw.modrinth.com/data/fQEb0iXm/versions/0.2.1/krypton-0.2.1.jar",
-    "mod_name" : "Krypton",
-    "jar_mod_id" : "krypton",
-    "version_number" : "0.2.1"
-  }, {
     "sha512" : "bd163811138b39652671e7323f20b3d09e544e09dc01e6f128d31271db72e5ed2838eaf797e5096c2aea03a5c014f49604ccac251fc92ee471a30c203ed683b7",
     "file_url" : "https://mediafilez.forgecdn.net/files/4278/698/DistantHorizons-1.6.10a-1.19.3.jar",
     "mod_name" : "Distant Horizons",
     "jar_mod_id" : "lod",
     "version_number" : "1.6.10a"
+  }, {
+    "sha512" : "aa04c550bdb82d343126431a055c0759f879243df713150fa1f30e70a8899178c92c17887151a1e5e1a2807b957785dcde13d29f377cddefc7ed320f4973ae4a",
+    "file_url" : "https://mediafilez.forgecdn.net/files/4167/317/carpet-extra-1.19.3-1.4.91.jar",
+    "mod_name" : "Carpet Extra",
+    "jar_mod_id" : "carpet-extra",
+    "version_number" : "1.4.91"
   } ],
   "fbcmlversion" : "1.19.3|0.14.13"
 }

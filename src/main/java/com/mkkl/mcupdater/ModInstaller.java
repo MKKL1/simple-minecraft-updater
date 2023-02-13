@@ -4,6 +4,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Response;
 import org.apache.commons.io.FilenameUtils;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -25,22 +26,22 @@ public class ModInstaller {
         modDownloader = new FileDownloader(client);
     }
 
-    public void installMods(List<ListModData> modList) {
-        ArrayList<CompletableFuture<String>> completableFutureList = new ArrayList<CompletableFuture<String>>();
-        for(ListModData modData : modList) {
-            completableFutureList.add(installMod(modData));
-        }
-        completableFutureList.forEach(x -> x.exceptionallyAsync(throwable -> {
-            throwable.printStackTrace();
-            return null;
-        }));
-        completableFutureList.forEach(CompletableFuture::join);
-    }
+//    public void installMods(List<ListModData> modList) {
+//        ArrayList<CompletableFuture<String>> completableFutureList = new ArrayList<CompletableFuture<String>>();
+//        for(ListModData modData : modList) {
+//            completableFutureList.add(installMod(modData));
+//        }
+//        completableFutureList.forEach(x -> x.exceptionallyAsync(throwable -> {
+//            throwable.printStackTrace();
+//            return null;
+//        }));
+//        completableFutureList.forEach(CompletableFuture::join);
+//    }
 
-    public CompletableFuture<String> installMod(ListModData modData) {
+    public CompletableFuture<String> installMod(AddUpdateGoal updateGoal) {
         CompletableFuture<String> completableFuture = new CompletableFuture<>();
         try {
-            URL modUrl = new URL(modData.getFile_url());
+            URL modUrl = new URL(updateGoal.modData.getFile_url());
             String pathToDownload = URLDecoder.decode(String.valueOf(Path.of(modsDirectory, FilenameUtils.getName(modUrl.getPath()))), StandardCharsets.UTF_8);
             System.out.println("Downloading to " + pathToDownload);
 
@@ -50,6 +51,8 @@ public class ModInstaller {
                     fos.flush();
                     fos.close();
                     completableFuture.complete(pathToDownload);
+                    updateGoal.newFile = new File(pathToDownload);
+                    updateGoal.postProcess();
                 } catch (IOException e) {
                     completableFuture.completeExceptionally(e);
                 }

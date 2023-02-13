@@ -1,8 +1,8 @@
 package com.mkkl.mcupdater;
 
 public enum FileLocationType {
-    LOCAL("local"),
-    NET("net");
+    LOCAL("lokalne"),
+    NET("zdalne");
 
     private final String name;
 
